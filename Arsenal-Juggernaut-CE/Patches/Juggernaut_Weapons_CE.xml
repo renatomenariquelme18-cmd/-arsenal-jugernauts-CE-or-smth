@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- ================================================= -->
+  <!-- SINGLE-USE ROCKET LAUNCHER -->
+  <!-- ================================================= -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/ThingDef[defName="Gun_SingleLauncher"]</xpath>
+    <match Class="PatchOperationAlways">
+      <value>
+        <comps>
+          <li Class="CombatExtended.CompProperties_AmmoUser">
+            <ammoSet>AmmoSet_RocketLauncher</ammoSet>
+            <magazineSize>1</magazineSize>
+            <reloadTime>4.5</reloadTime>
+            <oneUse>true</oneUse>
+          </li>
+        </comps>
+
+        <statBases>
+          <Bulk>18</Bulk>
+          <Mass>8</Mass>
+          <SightsEfficiency>0.65</SightsEfficiency>
+        </statBases>
+      </value>
+    </match>
+  </Operation>
+
+  <!-- ================================================= -->
+  <!-- GRENADE LAUNCHER -->
+  <!-- ================================================= -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/ThingDef[defName="Gun_GrenadeLauncher"]</xpath>
+    <match Class="PatchOperationAlways">
+      <value>
+        <comps>
+          <li Class="CombatExtended.CompProperties_AmmoUser">
+            <ammoSet>AmmoSet_40mmGrenade</ammoSet>
+            <magazineSize>1</magazineSize>
+            <reloadTime>3.8</reloadTime>
+          </li>
+        </comps>
+
+        <statBases>
+          <Bulk>14</Bulk>
+          <Mass>6</Mass>
+          <SightsEfficiency>0.7</SightsEfficiency>
+        </statBases>
+      </value>
+    </match>
+  </Operation>
+
+  <!-- ================================================= -->
+  <!-- SAW / LMG -->
+  <!-- ================================================= -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/ThingDef[defName="Gun_SAW"]</xpath>
+    <match Class="PatchOperationAlways">
+      <value>
+        <comps>
+          <li Class="CombatExtended.CompProperties_AmmoUser">
+            <ammoSet>AmmoSet_762x51</ammoSet>
+            <magazineSize>100</magazineSize>
+            <reloadTime>6.5</reloadTime>
+          </li>
+        </comps>
+
+        <statBases>
+          <Bulk>22</Bulk>
+          <Mass>11</Mass>
+          <SightsEfficiency>0.55</SightsEfficiency>
+          <Recoil>2.8</Recoil>
+        </statBases>
+      </value>
+    </match>
+  </Operation>
+
+</Patch>
