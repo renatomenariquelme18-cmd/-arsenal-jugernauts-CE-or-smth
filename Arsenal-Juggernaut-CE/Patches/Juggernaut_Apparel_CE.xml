@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- ============================= -->
+  <!-- JUGGERNAUT BODY ARMOR -->
+  <!-- ============================= -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/ThingDef[defName="JuggernautArmor"]</xpath>
+    <match Class="PatchOperationAlways">
+      <value>
+        <statBases>
+          <!-- STOP-GAP before Marine -->
+          <ArmorRating_Sharp>18</ArmorRating_Sharp>
+          <ArmorRating_Blunt>9</ArmorRating_Blunt>
+          <ArmorRating_Heat>12</ArmorRating_Heat>
+
+          <!-- CE specific -->
+          <Bulk>45</Bulk>
+          <Mass>35</Mass>
+        </statBases>
+      </value>
+    </match>
+  </Operation>
+
+  <!-- ============================= -->
+  <!-- JUGGERNAUT HELMET -->
+  <!-- ============================= -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/ThingDef[defName="JuggernautHelmet"]</xpath>
+    <match Class="PatchOperationAlways">
+      <value>
+        <statBases>
+          <!-- Saves vs normal rounds, AP can pen -->
+          <ArmorRating_Sharp>20</ArmorRating_Sharp>
+          <ArmorRating_Blunt>6</ArmorRating_Blunt>
+          <ArmorRating_Heat>10</ArmorRating_Heat>
+
+          <Bulk>12</Bulk>
+          <Mass>8</Mass>
+        </statBases>
+      </value>
+    </match>
+  </Operation>
+
+  <!-- ============================= -->
+  <!-- JUGGERNAUT LIGHT / CLOTHING -->
+  <!-- ============================= -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/ThingDef[defName="JuggernautSuit"]</xpath>
+    <match Class="PatchOperationAlways">
+      <value>
+        <statBases>
+          <!-- Transitional armor -->
+          <ArmorRating_Sharp>12</ArmorRating_Sharp>
+          <ArmorRating_Blunt>6</ArmorRating_Blunt>
+          <ArmorRating_Heat>8</ArmorRating_Heat>
+
+          <Bulk>28</Bulk>
+          <Mass>20</Mass>
+        </statBases>
+      </value>
+    </match>
+  </Operation>
+
+  <!-- ============================= -->
+  <!-- REINFORCED VARIANT (if exists) -->
+  <!-- ============================= -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/ThingDef[defName="JuggernautArmor_Reinforced"]</xpath>
+    <match Class="PatchOperationAlways">
+      <value>
+        <statBases>
+          <!-- Still NOT Marine-tier -->
+          <ArmorRating_Sharp>20</ArmorRating_Sharp>
+          <ArmorRating_Blunt>10</ArmorRating_Blunt>
+          <ArmorRating_Heat>14</ArmorRating_Heat>
+
+          <Bulk>55</Bulk>
+          <Mass>42</Mass>
+        </statBases>
+      </value>
+    </match>
+  </Operation>
+
+</Patch>
